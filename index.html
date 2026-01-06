@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYB Islam | ليث الجازي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            dark: '#0F172A',
+                            green: '#047857',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-color: #0F172A;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23047857' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800">
+
+    <!-- Navbar -->
+    <nav class="glass-nav fixed w-full z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fas fa-moon text-brand-gold"></i>
+                        <span>MYB <span class="text-brand-gold">Islam</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4 space-x-reverse">
+                        <a href="#home" class="text-white hover:text-brand-gold px-3 py-2 rounded-md text-base font-medium transition">الرئيسية</a>
+                        <a href="#about" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-base font-medium transition">عن ليث الجازي</a>
+                        <a href="#series" class="text-gray-300 hover:text-brand-gold px-3 py-2 rounded-md text-base font-medium transition">السلاسل</a>
+                        <a href="#contact" class="bg-brand-gold text-brand-dark px-5 py-2 rounded-full font-bold hover:bg-yellow-500 transition shadow-lg">تواصل معنا</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-400 hover:text-white inline-flex items-center justify-center p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">الرئيسية</a>
+                <a href="#about" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">عن ليث الجازي</a>
+                <a href="#series" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">السلاسل</a>
+                <a href="#contact" class="text-brand-gold block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">تواصل معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern min-h-screen flex items-center relative overflow-hidden text-white pt-20">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-right fade-in">
+                    <span class="text-brand-gold font-semibold tracking-wider uppercase mb-2 block">قناة MYB Islam</span>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        رحلة اليقين <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-300">والمعرفة الإسلامية</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg md:text-xl mb-8 leading-relaxed">
+                        نقدم محتوى إسلامي هادف بأسلوب عصري، يجمع بين أصالة الدين ولغة العصر، بقيادة الأستاذ ليث الجازي.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="https://www.youtube.com/@MYBIslam" target="_blank" class="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center gap-3 shadow-lg hover:shadow-red-500/30">
+                            <i class="fab fa-youtube text-xl"></i>
+                            تابع القناة الآن
+                        </a>
+                        <a href="#about" class="border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark px-8 py-4 rounded-full font-bold transition">
+                            اكتشف المزيد
+                        </a>
+                    </div>
+                    <div class="mt-10 flex items-center justify-center md:justify-start gap-8 text-gray-400">
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-white">+1M</h3>
+                            <p class="text-sm">مشاهدة</p>
+                        </div>
+                        <div class="h-8 w-px bg-gray-700"></div>
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold text-white">+100K</h3>
+                            <p class="text-sm">مشترك</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative fade-in hidden md:block">
+                    <!-- Placeholder for Leith Al-Jazi Image -->
+                    <div class="relative w-full h-[500px] bg-gradient-to-b from-brand-green to-brand-dark rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-gold/20 flex items-center justify-center group">
+                        <!-- Abstract decorative representation since we don't have a direct image URL -->
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594928506822-44a861623919?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center opacity-40 group-hover:scale-105 transition duration-700"></div>
+                        <div class="relative text-center p-8">
+                            <div class="w-24 h-24 mx-auto bg-brand-gold rounded-full flex items-center justify-center mb-4 shadow-lg">
+                                <i class="fas fa-play text-brand-dark text-3xl ml-1"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">MYB Islam</h3>
+                            <p class="text-brand-gold mt-2">ليث الجازي</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">من هو <span class="text-brand-green">ليث الجازي؟</span></h2>
+                <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-brand-green">
+                    <div class="w-14 h-14 bg-green-100 text-brand-green rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">الرسالة</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        نشر الوعي الإسلامي الصحيح بأسلوب يخاطب العقل والقلب، وتصحيح المفاهيم الخاطئة لدى الشباب بأسلوب معاصر.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-brand-gold">
+                    <div class="w-14 h-14 bg-yellow-100 text-brand-gold rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">المحتوى</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        تقديم قصص الأنبياء، السيرة النبوية، وتفسير الآيات بطريقة سردية مشوقة تجذب المشاهد وتثري معلوماته.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-xl transition duration-300 border-t-4 border-brand-green">
+                    <div class="w-14 h-14 bg-green-100 text-brand-green rounded-lg flex items-center justify-center mb-6 text-2xl">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">الجمهور</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        نخاطب الشباب والباحثين عن الحقيقة، ونسعى لبناء مجتمع واعي متمسك بقيمه ودينه.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Series Section -->
+    <section id="series" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-2">أحدث <span class="text-brand-green">السلاسل والمقاطع</span></h2>
+                    <p class="text-gray-600">محتوى متنوع يثري معرفتك</p>
+                </div>
+                <a href="#" class="hidden md:inline-flex items-center text-brand-green font-bold hover:text-brand-dark transition mt-4 md:mt-0">
+                    تصفح جميع الفيديوهات <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Card 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 group cursor-pointer">
+                    <div class="relative h-48 bg-gray-800 overflow-hidden">
+                         <!-- Fallback Image -->
+                        <div class="absolute inset-0 bg-slate-800 flex items-center justify-center text-white">
+                            <i class="fas fa-mosque text-4xl opacity-50"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition flex items-center justify-center">
+                            <i class="fas fa-play-circle text-5xl text-white opacity-80 group-hover:scale-110 transition duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-brand-gold bg-brand-dark px-2 py-1 rounded mb-2 inline-block">قصص الأنبياء</span>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-green transition">قصة سيدنا يوسف كما لم تسمعها من قبل</h3>
+                        <p class="text-gray-500 text-sm mb-4">استخلاص العبر والدروس من أحسن القصص بأسلوب ليث الجازي المميز.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-400 border-t pt-4">
+                            <span><i class="far fa-clock ml-1"></i> 20 دقيقة</span>
+                            <span><i class="far fa-eye ml-1"></i> 150K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 group cursor-pointer">
+                    <div class="relative h-48 bg-gray-800 overflow-hidden">
+                        <div class="absolute inset-0 bg-slate-700 flex items-center justify-center text-white">
+                             <i class="fas fa-history text-4xl opacity-50"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition flex items-center justify-center">
+                            <i class="fas fa-play-circle text-5xl text-white opacity-80 group-hover:scale-110 transition duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-brand-gold bg-brand-dark px-2 py-1 rounded mb-2 inline-block">تاريخ</span>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-green transition">عظمة الحضارة الإسلامية في الأندلس</h3>
+                        <p class="text-gray-500 text-sm mb-4">جولة تاريخية في شوارع غرناطة وقرطبة، وكيف أضاء المسلمون العالم.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-400 border-t pt-4">
+                            <span><i class="far fa-clock ml-1"></i> 15 دقيقة</span>
+                            <span><i class="far fa-eye ml-1"></i> 90K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 group cursor-pointer">
+                    <div class="relative h-48 bg-gray-800 overflow-hidden">
+                        <div class="absolute inset-0 bg-slate-900 flex items-center justify-center text-white">
+                             <i class="fas fa-question text-4xl opacity-50"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition flex items-center justify-center">
+                            <i class="fas fa-play-circle text-5xl text-white opacity-80 group-hover:scale-110 transition duration-300"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-brand-gold bg-brand-dark px-2 py-1 rounded mb-2 inline-block">خواطر</span>
+                        <h3 class="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-green transition">لماذا نبتلى؟ مفهوم الصبر والرضا</h3>
+                        <p class="text-gray-500 text-sm mb-4">رسالة طمأنينة لكل قلب متعب، وتفسير عميق لحكمة البلاء.</p>
+                        <div class="flex items-center justify-between text-sm text-gray-400 border-t pt-4">
+                            <span><i class="far fa-clock ml-1"></i> 10 دقيقة</span>
+                            <span><i class="far fa-eye ml-1"></i> 200K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="text-center mt-10 md:hidden">
+                <a href="#" class="inline-flex items-center text-brand-green font-bold hover:text-brand-dark transition">
+                    تصفح جميع الفيديوهات <i class="fas fa-arrow-left mr-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support / Contact Section -->
+    <section id="contact" class="py-20 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-brand-green rounded-full blur-3xl opacity-20 -translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">كن جزءاً من <span class="text-brand-gold">الرحلة</span></h2>
+            <p class="text-gray-300 mb-10 text-lg">
+                هل لديك اقتراح لموضوع جديد؟ أو تريد التواصل مع فريق MYB Islam؟ <br>
+                نحن نسعد دائماً بسماع آرائكم ومقترحاتكم.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                <a href="#" class="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition flex items-center justify-center gap-4 border border-white/10">
+                    <i class="fab fa-instagram text-3xl text-pink-500"></i>
+                    <div class="text-right">
+                        <h4 class="font-bold">تابعنا على إنستغرام</h4>
+                        <p class="text-sm text-gray-400">@MYBIslam</p>
+                    </div>
+                </a>
+                <a href="#" class="bg-white/10 backdrop-blur-sm p-6 rounded-xl hover:bg-white/20 transition flex items-center justify-center gap-4 border border-white/10">
+                    <i class="fas fa-envelope text-3xl text-brand-gold"></i>
+                    <div class="text-right">
+                        <h4 class="font-bold">راسلنا عبر البريد</h4>
+                        <p class="text-sm text-gray-400">info@mybislam.com</p>
+                    </div>
+                </a>
+            </div>
+
+            <form class="bg-white text-gray-800 p-8 rounded-2xl shadow-2xl max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('شكراً لتواصلك معنا! سيتم الرد قريباً.');">
+                <div class="mb-4">
+                    <label class="block text-right mb-2 text-sm font-bold text-gray-700">الاسم</label>
+                    <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition" placeholder="اسمك الكريم">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-right mb-2 text-sm font-bold text-gray-700">البريد الإلكتروني</label>
+                    <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition" placeholder="example@email.com">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-right mb-2 text-sm font-bold text-gray-700">الرسالة</label>
+                    <textarea class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition h-32" placeholder="اكتب رسالتك هنا..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brand-green text-white font-bold py-3 rounded-lg hover:bg-green-800 transition shadow-lg">
+                    إرسال الرسالة
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-gray-800 pt-10 pb-6 text-center text-gray-400">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-center mb-6">
+                <span class="text-2xl font-bold text-white">MYB <span class="text-brand-gold">Islam</span></span>
+            </div>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="hover:text-brand-gold transition"><i class="fab fa-youtube text-xl"></i></a>
+                <a href="#" class="hover:text-brand-gold transition"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="hover:text-brand-gold transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-brand-gold transition"><i class="fab fa-tiktok text-xl"></i></a>
+            </div>
+            <p class="text-sm">
+                جميع الحقوق محفوظة © 2024 MYB Islam - ليث الجازي
+                <br>
+                <span class="opacity-50 text-xs mt-2 block">تم التصميم بواسطة Qaes ai</span>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth Scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const menu = document.getElementById('mobile-menu');
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
